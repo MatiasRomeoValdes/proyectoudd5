@@ -1,0 +1,99 @@
+menu{
+
+    background-color: black;
+
+    border: 1px solid green;
+
+}
+
+
+
+.menu p{
+
+    background-color: yellow;
+
+    margin: 2%;
+
+    font-size: x-large;
+
+}
+
+.menu img{
+
+    width: 50%;
+
+    height: 10%;
+
+}
+
+
+
+.menu-foto{
+
+    display: flex;
+
+    background-color: yellow;
+
+}
+
+
+
+.parra{
+
+    height: 100%;
+
+    background-color: yellow;
+
+}
+
+
+
+
+.container-formulario{
+
+    display: flex;
+
+}
+
+
+
+
+
+.textoformu{
+
+    border-right: 1px solid black;
+
+    width: 50%;
+
+}
+
+.formu{
+
+    width: 50%;
+
+    margin-top: 5%;
+
+    text-align: end;
+
+
+
+}
+
+
+
+
+#form label{
+
+    margin-right: 2%;
+
+    font-size: x-large;
+
+}
+
+#form input{
+
+    background-color:yellow;
+
+    width: 70%;
+
+}

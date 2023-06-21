@@ -1,39 +1,34 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import { BrowserRouter } from 'react-router-dom'
+import React from 'react';
+import reactLogo from './assets/react.svg';
+import viteLogo from '/vite.svg';
+import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Header } from './components/header/header';
+import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 
-function App() {
 
+
+function App({id, title, description, price, imageUrl}) {
   return (
-    <>
-
-      <div className="app">
-        <BrowserRouter>
-        <Header></Header>
-        <Routes>
-          */RUTAS PUBLICAS */ 
-          <Route path='/home' element= {<Home></Home>}>
-            </Route> 
-            <Route path='/products' element= {<Products></Products>}>
-            </Route> 
-            <Route path='/products/:id' element= {<Product></Product>}>
-            </Route> 
-            <Route path='/auth/login' element= {<Loguin></Loguin>}>
-            </Route> 
-            <Route path='/auth/signup' element= {<Signup></Signup>}>
-            </Route> 
-            */RUTAS PRIVADAS /*
-            <Route path='/profile' element= {<Profile></Profile>}>
-            </Route> 
-        </Routes>
-        </BrowserRouter>
-       
-      </div>
-    </>
-  )
+    <Card style={{ width: '18rem' }}>
+    <Card.Img variant="top" src={ imageUrl } />
+    <Card.Body>
+      <Card.Title>{ title }</Card.Title>
+      <Card.Text>
+       { description }
+      </Card.Text>
+      <Card.Text>
+       { price }
+      </Card.Text>
+      <Button variant="primary">Ver</Button>
+      <Button variant="primary">Agregar</Button>
+    </Card.Body>
+  </Card>
+);
 }
 
-export default App
+
+export default App;
