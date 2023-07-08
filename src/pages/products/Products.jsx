@@ -42,10 +42,17 @@ export const Products = () => {
         imageUrl: "https://www.lecuine.com/blog/wp-content/uploads/2014/06/cuchillo-santoku-global-lecuine.jpg"
     },
  ]
- return ( 
-    { products.map(product => {
-        return <ProductCard id={product.id} title={product.title} description={product.description} imageURl= {product.imageURl}></ProductCard>
-    }}
- )
-
+ return (
+    <div>
+      {products.map(product => (
+        <ProductCard
+          key={product.id}
+          id={product.id}
+          title={product.title}
+          description={product.description}
+          imageUrl={product.imageUrl}
+        />
+      ))}
+    </div>
+  );
 }
